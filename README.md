@@ -1,31 +1,3 @@
 # ACM Research Coding Challenge (Spring 2022)
 
-## [](https://github.com/ACM-Research/-DRAFT-Coding-Challenge-S22#no-collaboration-policy)No Collaboration Policy
-
-**You may not collaborate with anyone on this challenge.**  You  _are_  allowed to use Internet documentation. If you  _do_  use existing code (either from Github, Stack Overflow, or other sources),  **please cite your sources in the README**.
-
-## [](https://github.com/ACM-Research/-DRAFT-Coding-Challenge-S22#submission-procedure)Submission Procedure
-
-Please follow the below instructions on how to submit your answers.
-
-1.  Create a  **public**  fork of this repo and name it  `ACM-Research-Coding-Challenge-S22`. To fork this repo, click the button on the top right and click the "Fork" button.
-
-2.  Clone the fork of the repo to your computer using  `git clone [the URL of your clone]`. You may need to install Git for this (Google it).
-
-3.  Complete the Challenge based on the instructions below.
-
-4.  Submit your solution by filling out this [form](https://acmutd.typeform.com/to/uTpjeA8G).
-
-## Assessment Criteria 
-
-Submissions will be evaluated holistically and based on a combination of effort, validity of approach, analysis, adherence to the prompt, use of outside resources (encouraged), promptness of your submission, and other factors. Your approach and explanation (detailed below) is the most weighted criteria, and partial solutions are accepted. 
-
-## [](https://github.com/ACM-Research/-DRAFT-Coding-Challenge-S22#question-one)Question One
-
-[Binary classification](https://en.wikipedia.org/wiki/Binary_classification) is a type of classification task that labels elements of a set (i.e. dataset) into two different groups. An example of this type of classification would be identifying if people had a specific disease or not based on certain health characteristics. The dataset found in `mushrooms.csv` holds data (22 different characteristics, specifically) about different types of mushrooms, including a mushroom's cap shape, cap surface texture, cap color, bruising, odor, and more. Remember to split the data into test and training sets (you can choose your own percent split). Information about the meaning of the letters under each column can be found within the file `attributelegend.txt`.
-
-**With the file `mushrooms.csv`, use an algorithm of your choice to classify whether a mushroom is poisonous or edible.**
-
-**You may use any programming language you feel most comfortable. We recommend Python because it is the easiest to implement. You're allowed to use any library or API you want to implement this, just document which ones you used in this README file.** Try to complete this as soon as possible.
-
-Regardless if you can or cannot answer the question, provide a short explanation of how you got your solution or how you think it can be solved in your README.md file. However, we highly recommend giving the challenge a try, you just might learn something new!
+I believe the best way to solve this challenge is through the implementation of the Logistic Regression Algorithm. I would first start off by importing a variety of libraries, including Pandas (to change the Mushrooms.csv into a DataFrame), SKLearn (to implement the Logistic Regression Model), NumPy (to handle the data due to it being large and haveing multiple dimensions), Matplotlib (to be able to graph data) and Seaborn (to visualize the data). After uploading the dataset, I would then check for the amount of columns as well as the individual count of poisonous mushrooms and the edible ones. Using this information, I would use data visualization and find out if the data is unbalanced. Additionally, I would also use the Graphical Model to identify the least valuable features and reduce the amount of dimensions in this dataset, in order to help best determine which mushrooms are poisonous and which ones are edible. These features contain similar or only one values and thus don't serve much purpose in predicting the edibleness of a mushroom. If the data set is balanced, I would then split the data using SKLearn into a training set (60%) and a test set (40%) in order to test if the model will work. Because I am using a Machine Learning Model, the data needs to be all numerical, and thus I would Label Encode all the data on SKLearn. Next, I would classify all this data using Logistic Regression and the use the model to finally predict whether the mushrooms are edible or not. To test the accuracy of my prediction, I would also create a confusion matrix, which will break down each feature and count the # of correct and incorrect predictions. Finally, I would deploy the final results using Django REST framework.
